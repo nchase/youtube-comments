@@ -1,0 +1,49 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0 1em;
+  padding: 1em 0 15em;
+  box-sizing: border-box;
+}
+.atom {
+  height: auto;
+  margin-bottom: 1em;
+  transition: all 200ms;
+}
+.atom:hover {
+  opacity: 1;
+  height: auto;
+}
+.atom.is-hidden {
+  margin-bottom: 0;
+  opacity: 0;
+  height: 0;
+  transform: translateX(-999em);
+}
+.loader.is-hidden {
+  display: none;
+}
+.commentLink.is-hidden {
+  display: none;
+}
+.videoFrame {
+  display: block;
+}
+.button {
+  cursor: pointer;
+}
+.controls {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  width: 100%;
+}
+.result {
+  margin: 0;
+  white-space: normal;
+  height: 100%;
+  overflow: scroll;
+  border-bottom: 0.25em solid #aaa;
+}

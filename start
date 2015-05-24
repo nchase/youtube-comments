@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $NODE_ENV == "production" ]]
+then
+  node index.js
+else
+  ./node_modules/.bin/concurrent "npm run watch" "node index.js"
+fi

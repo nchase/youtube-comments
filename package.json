@@ -1,0 +1,38 @@
+{
+  "name": "youtube-comments",
+  "version": "0.0.0",
+  "description": "YouTube Comments",
+  "main": "index.js",
+  "keywords": [
+    "youtube"
+  ],
+  "scripts": {
+    "bundle": "npm run bundle:scripts && npm run bundle:styles",
+    "bundle:scripts": "./node_modules/.bin/browserify script.js -t babelify > bundle.js ",
+    "bundle:styles": "./node_modules/.bin/autoprefixer style.css -o bundle.css",
+    "postinstall": "npm run bundle",
+    "start": "./start",
+    "test": "echo \"No tests [yet].\"",
+    "watch": "./node_modules/.bin/concurrent \"npm run watch:scripts\" \"npm run watch:styles\"",
+    "watch:scripts": "./node_modules/.bin/watchify script.js -t babelify -o bundle.js -v",
+    "watch:styles": "./node_modules/.bin/catw -v -c './node_modules/.bin/autoprefixer style.css -o bundle.css' style.css"
+  },
+  "author": {
+    "name": "Noah Chase",
+    "url": "https://www.npmjs.com/~nchase"
+  },
+  "license": "WTFPL",
+  "dependencies": {
+    "autoprefixer": "^5.1.1",
+    "babel": "^5.4.7",
+    "babelify": "^6.1.1",
+    "browserify": "^10.2.1",
+    "catw": "^1.0.0",
+    "concurrently": "0.0.5",
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "http-browserify": "^1.7.0",
+    "lodash": "^3.9.1",
+    "watchify": "^3.2.1"
+  }
+}
