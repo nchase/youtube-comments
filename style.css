@@ -34,6 +34,9 @@ body {
 .button {
   cursor: pointer;
 }
+.button:hover {
+  border-bottom: 0.25em solid #aaa;
+}
 .controls {
   position: fixed;
   bottom: 1em;
