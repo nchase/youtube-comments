@@ -10,7 +10,7 @@ body {
 .atom {
   height: auto;
   margin-bottom: 1em;
-  transition: all 200ms;
+  transition: height 200ms, margin-bottom 200ms, transform 200ms;
 }
 .atom:hover {
   opacity: 1;
