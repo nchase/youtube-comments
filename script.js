@@ -100,7 +100,7 @@ function handleInput(event) {
   var items = document.querySelectorAll('.atom--comment');
 
   for (var i = 0; i < items.length; i++) {
-    if (items[i].textContent.match(commentQuery) === null) {
+    if (items[i].textContent.match(new RegExp(commentQuery, 'gim')) === null) {
       items[i].classList.add('is-hidden');
     } else {
       items[i].classList.remove('is-hidden');
