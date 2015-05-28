@@ -23,7 +23,6 @@ body {
   height: 0;
   transform: translateX(-999em);
 }
-<<<<<<< HEAD
 
 .loader {
   position: fixed;
@@ -66,8 +65,6 @@ body {
   height: 100%;
   background-color: hsla(0, 0%, 100%, 0.7);
 }
-=======
->>>>>>> master
 .loader.is-hidden {
   display: none;
 }
@@ -80,15 +77,12 @@ body {
 .button {
   cursor: pointer;
 }
-<<<<<<< HEAD
 .button:hover {
   border-bottom: 0.25em solid #aaa;
 }
 .button.is-hidden {
   display: none;
 }
-=======
->>>>>>> master
 .controls {
   position: fixed;
   bottom: 1em;
@@ -102,7 +96,6 @@ body {
   overflow: scroll;
   border-bottom: 0.25em solid #aaa;
 }
-<<<<<<< HEAD
 
 .u-center {
   margin: auto;
@@ -111,5 +104,3 @@ body {
   right: 0;
   left: 0;
 }
-=======
->>>>>>> master
