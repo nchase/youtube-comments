@@ -52,7 +52,6 @@ function httpHandler (response) {
     if (responseData.nextPageToken === '') {
       nextPage.classList.add('is-hidden');
     }
-
     document.getElementById('loader').classList.add('is-hidden');
   });
 }
