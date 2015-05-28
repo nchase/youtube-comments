@@ -49,6 +49,10 @@ function httpHandler (response) {
     nextPage.textContent = 'Next Page';
     nextPage.setAttribute('data-nextToken', responseData.nextPageToken);
 
+    if (responseData.nextPageToken === '') {
+      nextPage.classList.add('is-hidden');
+    }
+
     document.getElementById('loader').classList.add('is-hidden');
   });
 }

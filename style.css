@@ -80,6 +80,9 @@ body {
 .button:hover {
   border-bottom: 0.25em solid #aaa;
 }
+.button.is-hidden {
+  display: none;
+}
 .controls {
   position: fixed;
   bottom: 1em;
