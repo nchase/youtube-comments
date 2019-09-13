@@ -69,7 +69,7 @@ function getVideoId(videoId) {
 nextPage.addEventListener('click', function(event) {
   document.getElementById('loader').classList.remove('is-hidden');
 
-  videoId = getVideoId(videoInput.value || videoInput.getAttribute('placeholder'));
+  var videoId = getVideoId(videoInput.value && videoInput.value.length || videoInput.getAttribute('placeholder'));
 
   var nextToken = nextPage.getAttribute('data-nextToken');
 
@@ -82,7 +82,7 @@ videoInput.addEventListener('input', handleVideoChange);
 function handleVideoChange(event) {
   var resultsEl = document.getElementById('result');
 
-  videoId = getVideoId(videoInput.value || videoInput.getAttribute('placeholder'));
+  var videoId = getVideoId(videoInput.value || videoInput.getAttribute('placeholder'));
 
   http.get(_.assign({}, httpOptions, {path: `/youtube/v3/commentThreads?part=snippet&maxResults=100&textFormat=plainText&videoId=${videoId}&key=AIzaSyCUk1eKBhptKtXtQIZIhV7g0tIvV2J7YvU`}), httpHandler);
 
